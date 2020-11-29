@@ -33,4 +33,4 @@ model.compile(optimizer = 'adam',loss = 'sparse_categorical_crossentropy',metric
 x_train = np.array(x_train)
 y_train = np.array(y_train)
 model.fit(x_train,y_train,batch_size = 16,epochs = 10)
-model.save('d:/Python/BettaFishClassification/model/betafish.h5')
+model.save('d:/Python/beta/BettaFishClassification/model/betafish.h5')

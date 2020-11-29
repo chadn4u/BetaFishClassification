@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import cv2
 import pickle
 
-myPath = 'd:/Python/BettaFishClassification/betafish/'
+myPath = 'd:/Python/beta/BettaFishClassification/betafish/'
 #categories = ['daisy', 'dandelion', 'rose', 'sunflower', 'tulip']
 categories = ['Black Samurai','Blue Rim','CrownTail','Cupang Sawah','Halfmoon']
 

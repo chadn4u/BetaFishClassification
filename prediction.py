@@ -31,20 +31,20 @@ input_shape = input_size + channel
 #x_train,x_test, y_train,y_test = train_test_split(feature,labels,test_size = 0.1) 
 categories = ['Black Samurai','Blue Rim','Crown Tail','Cupang Sawah','Halfmoon']
 
-model = tf.keras.models.load_model('d:/Python/BettaFishClassification/model/betafish.h5',compile=False)
+model = tf.keras.models.load_model('d:/Python/beta/BettaFishClassification/keras_model.h5',compile=False)
 #model.evaluate(np.array(x_test),np.array(y_test),verbose = 1)
 
 #prediction =   model.predict(x_test)
 
 # read image
-im = Image.open('D:/Python/BettaFishClassification/test1.jpg')
+im = Image.open('D:/Python/beta/BettaFishClassification/images.jpg')
 X = preprocess(im,input_size)
 X = reshape([X])
 y = model.predict(X)
 
 accuracy = str(np.max(y) * 100)
-if float(accuracy) > 90:
-    print( categories[np.argmax(y)], accuracy )
-else:
-    print( 'unknown '+categories[np.argmax(y)], accuracy )
+#if float(accuracy) > 90:
+print( categories[np.argmax(y)], accuracy )
+#else:
+#    print( 'unknown '+categories[np.argmax(y)], accuracy )
 #print( categories[np.argmax(y)], np.max(y) )
